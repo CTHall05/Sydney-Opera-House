@@ -19,8 +19,18 @@
   height: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 10px;
+}
+
+.svg-and-text {
+  display: flex;
+  margin-left: 50px;
+}
+
+.svg-and-text img {
+  height: 50px; /* or whatever height you want */
+  margin-right: 10px;
 }
 
 /* Book Event Section */
@@ -65,10 +75,11 @@
 }
 
 .btn-style2 {
-
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background-color: var(--secondary-colour);
 }
-
-
 
 .bookEvent-section, h2 {
   margin: 0;
