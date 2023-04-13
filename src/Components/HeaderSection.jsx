@@ -7,7 +7,7 @@ export default function HeaderSection() {
       <section className='header-section'>
         <div className="svg-and-text">
           <img src={operaSVG} alt="Description of the SVG"/>
-          <h3>Sydney Opera House</h3>
+          <h3>Sydney Opera<br/>House</h3>
         </div>
       </section>
       <div className='bookEvent-section'>
@@ -16,7 +16,9 @@ export default function HeaderSection() {
           <button className='btn-style1'>Explore Now!</button>
         </div>
         <div>
-          <button className='btn-style2'>Scroll Down</button>
+        <button class="btn-style2">
+          <p><i class="arrow down"></i></p>
+        </button>
         </div>
       </div>
     </div>

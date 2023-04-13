@@ -1,35 +1,45 @@
-
-:root {
-  --primary-colour: #00843D;
-  --secondary-colour: #FFCD00;
-  --text-colour: black;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: "victorian";
   src: url("../public/caslon-antique.regular.ttf");
 }
 
+:root {
+  --primary-colour: #00843D;
+  --secondary-colour: #FFCD00;
+  --text-colour: black;
+
+  --test-colour1: #919191;
+  --test-colour2: #4b4b4c;
+  --test-colour3: #fcdf99;
+  box-sizing: border-box;
+  font-family: "victorian", sans-serif;
+}
+
+/* App Key  */
+
+
 
 /* Header Background */
 
 .header-section {
-  background-color: var(--primary-colour);
+  background-color: var(--test-colour2);
   height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding: 10px;
+  font-family: "victorian", sans-serif;
 }
 
 .svg-and-text {
   display: flex;
+  align-items: center;
   margin-left: 50px;
+  color: white;
 }
 
 .svg-and-text img {
-  height: 50px; /* or whatever height you want */
+  height: 75px; /* or whatever height you want */
   margin-right: 10px;
 }
 
@@ -71,19 +81,127 @@
   width: 125px;
   height: 40px;
   cursor: pointer;
-  background-color: var(--secondary-colour);
+  background-color: var(--test-colour3);
+  border: solid 2px black;
+  border-radius: 5px;
+}
+
+.btn-style1:hover {
+  background-color: var(--test-colour2);
+  color: white;
 }
 
 .btn-style2 {
+  position: relative;
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  background-color: var(--secondary-colour);
+  background-color: var(--test-colour3);
+  border: solid black 2px;
+}
+
+.btn-style2:hover {
+  background-color: var(--test-colour2);
+  color: var(--test-colour3);
+  cursor: pointer;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .bookEvent-section, h2 {
   margin: 0;
 }
+
+/* Event Section */
+.event-section-container {
+  font-family: "Victorian", sans-serif;
+  height: 100vh;
+  padding-top: 20px;
+  background-color: var(--test-colour2);
+  color: white;
+}
+
+/* Even Image Carousel */
+
+.slick-slider {
+  height: 500px;
+}
+
+/* .slick-slide img {
+  display: block;
+  margin: 0 auto;
+  max-height: 80vh;
+  max-width: 60vw;
+  
+} */
+.slick-slide img {
+  display: block;
+  margin: 0 auto;
+  width: 60vw;
+  height: 80vh;
+  /* object-fit: cover; to ensure the image fills the container without distortion */
+  border-radius: 5px;
+}
+
+.event-paragraph {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Book Your Ticket Component */
+
+.bookYourTicket-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Victorian", sans-serif;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.date-time-formSection {
+  display: flex;
+  flex-direction: row;
+  gap: 20px ;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input-section {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-section input {
+  display: block;
+}
+
 
 
 .App {
