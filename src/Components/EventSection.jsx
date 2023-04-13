@@ -5,6 +5,7 @@
   import JornImage from "../images/jornutzon.jpeg";
   import MusicImage from "../images/musicImage.jpg";
   import Singer from "../images/singer.jpg";
+  
 
   export default function EventSection() {
 

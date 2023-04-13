@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css'; // import your CSS file
 
 function BookYourTicket() {
   const [name, setName] = useState('');
@@ -16,54 +17,40 @@ function BookYourTicket() {
 
   return (
     <div className='bookYourTicket-container'>
-      <h2>BOOK YOUR TICKET</h2>
       <form className='form-container' onSubmit={handleSubmit}>
-        <div className='form-input-section'>
-          <div className='form-section'>
+        <h2>BOOK YOUR TICKET</h2>
+        <div className='form-grid'>
+          <div className='form-input-container'>
             <label htmlFor="name">Enter Your Name:</label>
-            <div>
-              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
-            <br />
-            <div className='date-time-formSection'>
-              <label htmlFor='date'>Date:
-              <input type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
-              </label>
-              <br />
-              <label>
-                Time:
-                <input type="time" value={time} onChange={(e) => setTime(e.target.value)} />
-              </label>
-            </div>
-            <br />
-            <label>
-              Adults:
-              <input type="number" min="0" value={adults} onChange={(e) => setAdults(parseInt(e.target.value))} />
-            </label>
+            <input className="form-input" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
-          
-          <div className='form-section'>
-            <label>
-              Enter Your Email:
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </label>
-            <br />
-            <label>
-              Enter Your Contact Number:
-              <input type="tel" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} />
-            </label>
-            <br />
-            <label>
-              Children:
-              <input type="number" min="0" value={children} onChange={(e) => setChildren(parseInt(e.target.value))} />
-            </label>
-            <br />
+          <div className='form-input-container'>
+            <label htmlFor='email'>Enter Your Email:</label>
+            <input className="form-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
-        
+          <div className='form-input-container'>
+            <label htmlFor='date'>Date:</label>
+            <input className="form-input" type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
+            <label htmlFor='time'>Time:</label>
+            <input className="form-input" type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+          </div>
+          <div className='form-input-container'>
+            <label htmlFor='contactNumber'>Enter Your Contact Number:</label>
+            <input className="form-input" type="tel" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} />
+          </div>
+          <div className='form-input-container'>
+            <label htmlFor='adults'>Adults:</label>
+            <input className="form-input" type="number" min="0" value={adults} onChange={(e) => setAdults(parseInt(e.target.value))} />
+          </div>
+          <div className='form-input-container'>
+            <label htmlFor='children'>Children:</label>
+            <input className="form-input" type="number" min="0" value={children} onChange={(e) => setChildren(parseInt(e.target.value))} />
+          </div>
         </div>
-        
-        <button type="submit">Book Now</button>
-    </form>
+        <div className='form-button-container'>
+          <button className="btn-style1" type="submit">Book Now</button>
+        </div>
+      </form>
     </div>
   );
 }
