@@ -202,6 +202,13 @@
   grid-gap: 2rem;
 }
 
+.date-time-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.9rem;
+  width: 10vw;
+}
+
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;

@@ -21,18 +21,22 @@ function BookYourTicket() {
         <h2>BOOK YOUR TICKET</h2>
         <div className='form-grid'>
           <div className='form-input-container'>
-            <label htmlFor="name">Enter Your Name:</label>
+            <label htmlFor='name'>Enter Your Name:</label>
             <input className="form-input" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div className='form-input-container'>
             <label htmlFor='email'>Enter Your Email:</label>
             <input className="form-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
-          <div className='form-input-container'>
-            <label htmlFor='date'>Date:</label>
-            <input className="form-input" type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
-            <label htmlFor='time'>Time:</label>
-            <input className="form-input" type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+          <div className='date-time-container'>
+            <div className='form-input-container'>
+              <label htmlFor='date'>Date:</label>
+              <input className="form-input" type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
+            </div>
+            <div className='form-input-container'>
+              <label htmlFor='time'>Time:</label>
+              <input className="form-input" type="time" value={time} onChange={(e) => setTime(e.target.value)} />
+            </div>
           </div>
           <div className='form-input-container'>
             <label htmlFor='contactNumber'>Enter Your Contact Number:</label>
@@ -47,6 +51,7 @@ function BookYourTicket() {
             <input className="form-input" type="number" min="0" value={children} onChange={(e) => setChildren(parseInt(e.target.value))} />
           </div>
         </div>
+
         <div className='form-button-container'>
           <button className="btn-style1" type="submit">Book Now</button>
         </div>

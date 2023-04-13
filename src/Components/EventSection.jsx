@@ -21,7 +21,7 @@
       <div className='event-section-container'>
         <div className="event-title-container">
           <h2>Most Popular Events</h2>
-          <p className='event-paragraph'>Our key events about the Opera Houses's 50 years of History</p>
+          <p className='event-paragraph'>Experience our 50th Aniversary and our story like you have never seen before!</p>
         </div>
         <Slider {...settings}>
         <div>
