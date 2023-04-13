@@ -1,11 +1,14 @@
 import './App.css';
 import HeaderSection from './Components/HeaderSection';
-import BookEvent from './Components/BookEvent';
+import EventSection from './Components/EventSection';
+import BookYourTicket from './Components/BookYourTicket';
 
 function App() {
   return (
     <div className="App">
       <HeaderSection/>
+      <EventSection></EventSection>
+      <BookYourTicket></BookYourTicket>
     </div>
   );
 }
